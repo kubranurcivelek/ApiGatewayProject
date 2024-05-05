@@ -30,7 +30,7 @@ Service Endpoints: The service provides the following endpoints:
    - **Solution**: Added error handling to provide meaningful error messages.
 
 
-3. **Docker Image Build Errors**:
+2. **Docker Image Build Errors**:
    - Issues due to unnecessary files being included in the Docker build.
    - **Solution**: Added a `.dockerignore` file to exclude unnecessary files.
 
