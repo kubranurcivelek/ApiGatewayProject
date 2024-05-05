@@ -29,9 +29,6 @@ Service Endpoints: The service provides the following endpoints:
    - Difficulty connecting the API Gateway to the underlying service.
    - **Solution**: Added error handling to provide meaningful error messages.
 
-2. **Payload Parsing Problems**:
-   - Trouble parsing JSON request payloads.
-   - **Solution**: Included the `express.json()` middleware to parse JSON data.
 
 3. **Docker Image Build Errors**:
    - Issues due to unnecessary files being included in the Docker build.
