@@ -18,3 +18,22 @@ The gateway accepts POST requests to the following endpoints:
 - **`/api/Website/PayBill`**: Forwards the request to the payment service to handle the bill payment.
 - **`/api/Website/AddBill`**: Forwards the request to the bill management service to add a new bill.
 
+### Assumptions
+Single Service: Both /api/Website/PayBill and /api/Website/AddBill endpoints are routed to the same service running on http://localhost:3003.
+Service Endpoints: The service provides the following endpoints:
+**`/pay for payment operations.`**
+**`/add for adding bills.`**
+
+## Problems Encountered
+1. **Service Connectivity Issues**:
+   - Difficulty connecting the API Gateway to the underlying service.
+   - **Solution**: Added error handling to provide meaningful error messages.
+
+2. **Payload Parsing Problems**:
+   - Trouble parsing JSON request payloads.
+   - **Solution**: Included the `express.json()` middleware to parse JSON data.
+
+3. **Docker Image Build Errors**:
+   - Issues due to unnecessary files being included in the Docker build.
+   - **Solution**: Added a `.dockerignore` file to exclude unnecessary files.
+
